@@ -2,8 +2,32 @@
     "extends": "../tsconfig.base",
     "compilerOptions": {
         "removeComments": true,
+        // "outFile": "../js/app.js"
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        // "traceResolution": true,
+
+        // example of specifing path for folder to search modules in
+        // "baseUrl": "./modules",
+
+        // example of specifing module paths for the compiler
+        // tells how particular modules map to files
+        // "paths": {
+        //     "my_lib": ["./custom_path"] // relative to baseUrl
+        // }
     },
-    "include": [
-        "./**/*"
+    // array of directories with modules. Combining multiple directories into a single file
+    // "rootDirs": [
+    //     "modules",
+    //     "src",
+    //     "ts/modules"
+    // ]
+
+
+    // "include": [
+    //     "./**/*"
+    // ]
+    "files": [
+        "./app.ts"
     ]
 }
